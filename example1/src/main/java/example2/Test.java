@@ -12,6 +12,7 @@ public class Test {
 			}
 		};
 		*/
+		
 		/*IOperator mult = new IOperator() {
 			@Override
 			public int op(int a, int b) {
@@ -19,6 +20,9 @@ public class Test {
 			}
 		};*/
 		
+		/***
+		 * utilisation des lambdas expressions avec une interface
+		 */
 		IOperator add = (int a,int b) -> {
 			return a + b;
 		};
@@ -29,13 +33,13 @@ public class Test {
 		 * on peut retirer les types d'arguments
 		 * une seule methode ne necessite pas les accolades
 		 * pas besoin du return
-		 * BiFunction remplace l'interface qui a une methode avec 
+		 * BiFunction remplace l'interface qui a une methode avec 2 variables d'entrée
+		 * Si plus, utiliser des interfaces
 		 * lambdas = mettre une fonction dans une variable types en entrée
 		 * 
 		 * */
 		
 		BiFunction<Integer, Integer, Integer> mult = (a,b) -> a * b;
-		
 		System.out.println(mult.apply(2, 3));
 		
 		 
